@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>Avtomobil Seçimi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e6f2ff, #ffffff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            position: relative;
+            width: 600px;
+            height: 300px;
+        }
+
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 25px 40px;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            background: #0077ff;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-family: "Trebuchet MS";
+            box-shadow: 0 0 20px #7abaff;
+        }
+
+        .btn:hover {
+            background: #005fcc;
+            transform: translateY(-50%) scale(1.15);
+            box-shadow: 0 0 30px #3399ff;
+        }
+
+        #left { left: 0; }
+        #right { right: 0; }
+    </style>
+</head>
+<body>
+
+<audio id="sound">
+    <source src="sound.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <a href="santafe.html" class="btn" id="left" onclick="playSound()">SANTAFE</a>
+    <a href="frontlander.html" class="btn" id="right" onclick="playSound()">FRONTLANDER</a>
+</div>
+
+<script>
+function playSound() {
+    document.getElementById("sound").play();
+}
+</script>
+
+</body>
+</html>
